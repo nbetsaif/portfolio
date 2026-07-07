@@ -11,7 +11,7 @@ import { Footer } from "./components/Footer";
 
 function App() {
   return (
-    <ThemeProvider defaultTheme="dark" storageKey="saif-portfolio-theme">
+    <ThemeProvider defaultTheme="light" storageKey="saif-portfolio-theme">
       <div className="min-h-screen flex flex-col relative" style={{ backgroundColor: "hsl(var(--background))", color: "hsl(var(--foreground))" }}>
         <Navbar />
         <main className="flex-1 flex flex-col w-full overflow-hidden">

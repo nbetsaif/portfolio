@@ -3,6 +3,7 @@ import { FiMail, FiPhone, FiGithub, FiLinkedin, FiArrowDown } from "react-icons/
 
 export function Hero() {
   const scrollTo = (id: string) => document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+  const base = import.meta.env.BASE_URL;
   const btn = (bg: string, color: string, border?: string) => ({
     background: bg, color, border: border || "none", borderRadius: 9999,
     padding: "0.75rem 2rem", fontSize: "1rem", fontWeight: 600, cursor: "pointer",
@@ -32,7 +33,7 @@ export function Hero() {
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.2 }}
             style={{ display: "flex", flexWrap: "wrap", gap: "1rem", margin: "2rem 0" }}>
             <button style={btn("hsl(var(--primary))", "hsl(var(--primary-foreground))")} onClick={() => scrollTo("projects")}>View Projects</button>
-            <a href="/cv_saif.pdf" download="Saif_Nbet_CV.pdf" style={{ ...btn("transparent", "hsl(var(--foreground))", "1px solid hsl(var(--border))"), textDecoration: "none", display: "inline-block" }}>Download CV</a>
+            <a href={`${base}cv_saif.pdf`} download="Saif_Nbet_CV.pdf" style={{ ...btn("transparent", "hsl(var(--foreground))", "1px solid hsl(var(--border))"), textDecoration: "none", display: "inline-block" }}>Download CV</a>
             <button style={btn("transparent", "hsl(var(--foreground))")} onClick={() => scrollTo("contact")}>Contact Me</button>
           </motion.div>
 
@@ -57,7 +58,7 @@ export function Hero() {
         <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.6, delay: 0.15 }}
           style={{ flex: "0 0 auto" }}>
           <img
-            src="/profile.jpg"
+            src={`${base}profile.jpg`}
             alt="Saif Nbet"
             style={{
               width: 300, 

@@ -352,6 +352,8 @@ const projects = [
 const techPill = { border: "1px solid hsl(var(--border) / 0.6)", color: "hsl(var(--muted-foreground))", borderRadius: 4, padding: "0.15rem 0.5rem", fontSize: "0.7rem", fontFamily: "monospace" };
 
 export function Projects() {
+  const base = import.meta.env.BASE_URL;
+
   return (
     <section id="projects" style={{ padding: "5rem 1.5rem", background: "hsl(var(--secondary) / 0.3)" }}>
       <div style={{ maxWidth: 1000, margin: "0 auto" }}>
@@ -373,7 +375,7 @@ export function Projects() {
                 }}
               >
                 <img
-                  src={p.image}
+                  src={`${base}${p.image.replace(/^(\/|public\/)/, "")}`}
                   alt={p.title}
                   style={{
                     width: "100%",
