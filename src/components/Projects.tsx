@@ -192,7 +192,7 @@ const projects = [
       "YouTube Player"
     ],
     links: [{ label: "Play Store", url: "https://play.google.com/store/apps/details?id=com.c1euro.user" }, { label: "App Store", url: "https://apps.apple.com/fr/app/c1euro/id6470069252" }],
-    image: "public/c1euro.jpg",
+    image: "/C1EURO.png",
   },
   {
     title: "C1EURO PRO", context: "Freelance",
