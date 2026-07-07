@@ -64,7 +64,7 @@ const skillCategories = [
     ],
   },
   { title: "Methodology", skills: ["Agile/Scrum"] },
-  { title: "Spoken Languages", skills: ["English", "French", "Arabic"] },
+  { title: "Spoken Languages", skills: ["English", "French", "Arabic", "Spanish"] },
 ];
 
 export function Skills() {
